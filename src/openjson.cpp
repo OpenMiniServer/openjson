@@ -1364,7 +1364,6 @@ void OpenJson::Log(const char* format, ...)
     va_end(ap);
     PRINTF("OpenJson WARN:%s\n", tmp);
 }
-
 void OpenJson::throwError(const char* errMsg)
 {
     static const char* InfoTags[6] = { "EMPTY", "STRING", "NUMBER", "OBJECT", "ARRAY", "UNKNOWN" };

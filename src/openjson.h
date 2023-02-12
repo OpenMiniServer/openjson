@@ -5,6 +5,7 @@
  * copies of the Software, and permit persons to whom the Software is
  * furnished to do so, under the terms of the COPYING file.
  ***************************************************************************/
+
 #ifndef HEADER_OPEN_JSON_H
 #define HEADER_OPEN_JSON_H
 
@@ -138,7 +139,6 @@ class OpenJson
     void removeNode(size_t idx);
     void removeNode(const char* key);
     OpenJson(OpenJson& json) {}
-
     OpenJson(const OpenJson& json) {}
     void operator=(OpenJson& json) {}
     void operator=(const OpenJson& json) {}
@@ -194,7 +194,6 @@ public:
 private:
     static bool EnableLog_;
     static void Log(const char* format, ...);
-
     void read(Context* context, bool isRoot = false);
     void readNumber();
     void readString();
