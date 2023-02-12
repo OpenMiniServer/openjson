@@ -95,6 +95,19 @@ int main()
         buff1 = json.encode();
         assert(buff1 == buff2);
     }
+
+    {
+        OpenJson json1;
+        json1["a"] = "[\"abc\"]";
+        buff2 = json1.encode();
+
+        buff1 = "{\"a\":\"[\\\"abc\\\"]\"}";
+        assert(buff2 == buff1);
+
+        OpenJson json2;
+        json2.decode(buff2);
+        assert(buff2 == json2.encode());
+    }
     std::cout << "公众号:https://mp.weixin.qq.com/s/doD_JNm3rNBqQIOrscOnqw" << std::endl;
     return 0;
 }
@@ -102,10 +115,6 @@ int main()
 
 ## 运行环境
 Windows、linux等跨平台设计
-
-## 全部源文件
-. src/openjson.h
-. src/openjson.cpp
 
 ## 编译和运行
 ```
@@ -116,3 +125,10 @@ cmake ..
 make
 ./test
 ```
+
+## 全部源文件
+. src/openjson.h
+. src/openjson.cpp
+
+
+# OpenJsons使用教程

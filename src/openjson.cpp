@@ -620,7 +620,15 @@ void OpenJson::operator=(const std::string& val)
     if (type_ != STRING) type_ = STRING;
     if (segment_ == 0) segment_ = new Segment;
     segment_->setType(Segment::STRING);
-    segment_->content_ = val;
+    const char* ptr = 0;
+    for (size_t i = 0; i < val.size(); ++i)
+    {
+        if (val[i] == '"' || val[i] == '\'')
+        {
+            segment_->content_.push_back('\\');
+        }
+        segment_->content_.push_back(val[i]);
+    }
 }
 
 void OpenJson::operator=(const char* val)
@@ -633,7 +641,17 @@ void OpenJson::operator=(const char* val)
     if (type_ != STRING) type_ = STRING;
     if (segment_ == 0) segment_ = new Segment;
     segment_->setType(Segment::STRING);
-    segment_->content_ = val;
+    segment_->content_.clear();
+    const char* ptr = 0;
+    for (size_t i = 0; i < strlen(val); ++i)
+    {
+        ptr = val + i;
+        if (*ptr == '"' || *ptr == '\'')
+        {
+            segment_->content_.push_back('\\');
+        }
+        segment_->content_.push_back(*ptr);
+    }
 }
 
 void OpenJson::operator=(bool val)
