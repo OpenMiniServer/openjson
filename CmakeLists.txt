@@ -1,0 +1,11 @@
+
+CMAKE_MINIMUM_REQUIRED(VERSION 3.12.1)
+PROJECT(openjson)
+
+include_directories(src)
+
+add_executable(test 
+	src/openjson.h 
+	src/openjson.cpp 
+	test/main.cpp
+)
