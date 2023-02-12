@@ -1,7 +1,7 @@
 # openjson
-OpenJson is the world's best high-performance C++json parser
+OpenJson是世界上最好用的高性能C++json解析器
 
-## Test Demo
+## 测试例子
 ```C++
 #include "openjson.h"
 #include <iostream>
@@ -94,19 +94,19 @@ int main()
         buff1 = json.encode();
         assert(buff1 == buff2);
     }
-    std::cout << "https://mp.weixin.qq.com/s/doD_JNm3rNBqQIOrscOnqw" << std::endl;
+    std::cout << "公众号:https://mp.weixin.qq.com/s/doD_JNm3rNBqQIOrscOnqw" << std::endl;
     return 0;
 }
 ```
 
-## Environment
-Windows、linux etc.Cross-platform design
+## 运行环境
+Windows、linux等跨平台设计
 
-## Source file list
+## 全部源文件
 . src/openjson.h
 . src/openjson.cpp
 
-## Build and run
+## 编译和运行
 ```
 cd ./openjson
 mkdir build

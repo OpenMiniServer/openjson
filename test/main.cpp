@@ -1,11 +1,7 @@
-# openjson
-OpenJson is the world's best high-performance C++json parser
-
-## Test Demo
-```C++
+#include <assert.h>
 #include "openjson.h"
 #include <iostream>
-#include <assert.h>
+
 int main()
 {
     std::string buff1;
@@ -94,24 +90,6 @@ int main()
         buff1 = json.encode();
         assert(buff1 == buff2);
     }
-    std::cout << "https://mp.weixin.qq.com/s/doD_JNm3rNBqQIOrscOnqw" << std::endl;
+    std::cout << "" << std::endl;
     return 0;
 }
-```
-
-## Environment
-Windows、linux etc.Cross-platform design
-
-## Source file list
-. src/openjson.h
-. src/openjson.cpp
-
-## Build and run
-```
-cd ./openjson
-mkdir build
-cd build
-cmake ..
-make
-./test
-```
