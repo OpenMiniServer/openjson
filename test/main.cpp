@@ -90,6 +90,6 @@ int main()
         buff1 = json.encode();
         assert(buff1 == buff2);
     }
-    std::cout << "" << std::endl;
+    std::cout << "complete!\nhttps://mp.weixin.qq.com/s/doD_JNm3rNBqQIOrscOnqw" << std::endl;
     return 0;
 }

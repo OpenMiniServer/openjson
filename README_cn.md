@@ -1,5 +1,5 @@
 # openjson
-OpenJson是世界上最好用的高性能C++json解析器
+OpenJson是世界上最好用的高性能C++json解析器，非常简单易用，解析速度超快，可以解析超过1GB以上的json文件。
 
 ## 测试例子
 ```C++
