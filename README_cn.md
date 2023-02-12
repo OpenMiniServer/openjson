@@ -9,14 +9,14 @@ OpenJson是世界上最好用的高性能C++json解析器
 int main()
 {
     std::string buff1;
-    //stringify
+    //生成json字符串
     {
         OpenJson json;
         auto& nodeA = json["a"];
         nodeA["aa"] = "aa12";
         nodeA["ab"] = 123;
         auto& nodeB = json["b"];
-        //iterate element
+        //迭代数组原生
         for (size_t i = 0; i < 2; i++)
         {
             auto& node = nodeB[i];
@@ -31,7 +31,7 @@ int main()
                 node["bb"][1] = 1.3;
             }
         }
-        //set element
+        //设置值
         json["b"][1]["bb"][2] = true;
         buff1 = json.encode();
     }
@@ -46,7 +46,7 @@ int main()
         "]}";
 
     assert(buff1 == buff2);
-    //parse
+    //解析json字符串
     {
         OpenJson json;
         json.decode(buff2);
@@ -68,7 +68,7 @@ int main()
             }
         }
         assert(json["b"][1]["bb"][2].b() == true);
-        //remove element
+        //删除元素
         json["b"][1]["bb"].remove(1);
         json.encodeFile("./test.json");
     }
@@ -82,6 +82,7 @@ int main()
         "{\"bb\":[999999999999999,true]}"
         "]}";
     {
+        //加载json文件
         OpenJson json;
         json.decodeFile("./test.json");
         buff1 = json.encode();
