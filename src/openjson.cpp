@@ -1372,6 +1372,11 @@ void OpenJson::writeArray()
     wcontext_->wbuffer_.append("]");
 }
 
+void OpenJson::EnableLog(bool enable)
+{
+    EnableLog_ = enable;
+}
+
 void OpenJson::Log(const char* format, ...)
 {
     if (!EnableLog_) return;
