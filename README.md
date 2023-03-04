@@ -1,4 +1,5 @@
 # openjson
+Cross-platform multi-threaded design!
 OpenJson is the world's best high-performance C++json parser
 
 ## Test Demo
