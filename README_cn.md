@@ -1,6 +1,31 @@
 # openjson
 跨平台多线程设计
-OpenJson是世界上最好用的高性能C++json解析器，非常简单易用，解析速度超快，可以解析超过1GB以上的json文件。
+OpenJson是最好用的高性能C++json解析器，非常简单易用，解析速度超快，可以解析超过1GB以上的json文件。
+
+**OpenLinyou项目设计跨平台服务器框架，在VS或者XCode上写代码，无需任何改动就可以编译运行在Linux上，甚至是安卓和iOS.**
+OpenLinyou：https://github.com/openlinyou
+
+## 运行环境
+Windows、linux、Mac、iOS、Android等跨平台设计
+
+## 编译和运行
+请安装cmake工具，用cmake可以构建出VS或者XCode工程，就可以在vs或者xcode上编译运行。
+源代码：https://github.com/openlinyou/openjson
+```
+git clone https://github.com/openlinyou/openjson
+cd ./openjson
+mkdir build
+cd build
+cmake ..
+#如果是win32，在该目录出现openjson.sln，点击它就可以启动vs写代码调试
+make
+./test
+```
+
+## 全部源文件
++ src/openjson.h
++ src/openjson.cpp
+
 
 ## 测试例子
 ```C++
@@ -114,22 +139,4 @@ int main()
 }
 ```
 
-## 运行环境
-Windows、linux等跨平台设计
 
-## 编译和运行
-```
-cd ./openjson
-mkdir build
-cd build
-cmake ..
-make
-./test
-```
-
-## 全部源文件
-. src/openjson.h
-. src/openjson.cpp
-
-
-# OpenJsons使用教程

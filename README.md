@@ -2,6 +2,33 @@
 Cross-platform multi-threaded design!
 OpenJson is the world's best high-performance C++json parser
 
+**The OpenLinyou project designs a cross-platform server framework. Write code in VS or XCode and run it on Linux without any changes, even on Android and iOS.**
+OpenLinyou：https://github.com/openlinyou
+
+## Cross-platform support
+Linux and Android use epoll, iOS and Mac use kqueue, other systems (Windows) use select, so the number of io cannot exceed 64.
+
+## Compilation and execution
+Please install the cmake tool. With cmake you can build a VS or XCode project and compile and run it on VS or XCode. 
+Source code:https://github.com/openlinyou/openjson
+```
+# Clone the project
+git clone https://github.com/openlinyou/openjson
+cd ./openjson
+# Create a build project directory
+mkdir build
+cd build
+cmake ..
+# If it's win32, openjson.sln will appear in this directory. Click it to start VS for coding and debugging.
+make
+./test
+```
+
+## All source files
++ src/openjson.h
++ src/openjson.cpp
+
+
 ## Test Demo
 ```C++
 #include "openjson.h"
@@ -111,21 +138,4 @@ int main()
     std::cout << "complete!\nhttps://mp.weixin.qq.com/s/doD_JNm3rNBqQIOrscOnqw" << std::endl;
     return 0;
 }
-```
-
-## Environment
-Windows、linux etc.Cross-platform design
-
-## Source file list
-. src/openjson.h
-. src/openjson.cpp
-
-## Build and run
-```
-cd ./openjson
-mkdir build
-cd build
-cmake ..
-make
-./test
 ```
