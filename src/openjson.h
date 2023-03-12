@@ -37,6 +37,8 @@ typedef unsigned __int64     uint64_t;
 #endif
 #endif // _MSC_VER
 
+namespace open
+{
 class OpenJson
 {
     enum JsonType
@@ -205,5 +207,6 @@ private:
     void writeString();
     void writeObject();
     void writeArray();
+};
 };
 #endif /* HEADER_OPEN_JSON_H */

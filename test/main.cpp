@@ -2,6 +2,8 @@
 #include "openjson.h"
 #include <iostream>
 
+using namespace open;
+
 int main()
 {
     std::string buff1;

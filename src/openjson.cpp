@@ -37,6 +37,8 @@ inline int SNPRINTF(char* buffer, size_t size, const char* format, ...)
 #define SSCANF   sscanf
 #endif
 
+namespace open
+{
 static inline void doubleToStr(double v, char* buffer, int size)
 {
     double tmp = floor(v);
@@ -1401,3 +1403,4 @@ void OpenJson::throwError(const char* errMsg)
     PRINTF("OpenJson:throwError content:%s\n", tmp);
     throw errMsg;
 }
+};
